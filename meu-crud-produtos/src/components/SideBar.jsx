@@ -6,10 +6,10 @@ export default function SideBar() {
         <h5>Menu</h5>
         <ul className="list-unstyled">
             <li>
-                <Link to="/" className="text-decoration-none">Dashboard</Link>
+                <Link to="/" style={{ color: "#000000" }} className="text-decoration-none">Dashboard</Link>
             </li>
             <li>
-                <Link to="/products" className="text-decoration-none">Produtos</Link>
+                <Link to="/products" style={{ color: "#000000" }} className="text-decoration-none">Produtos</Link>
             </li>
         </ul>
     </div>

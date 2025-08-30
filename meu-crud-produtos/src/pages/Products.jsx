@@ -10,15 +10,40 @@ export default function Products() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
-  const loadProducts = async () => {
+   const loadProducts = async () => {
     const response = await api.get("/products");
     setProducts(response.data);
-    $("#productsTable").DataTable();
   };
 
   useEffect(() => {
     loadProducts();
   }, []);
+
+  useEffect(() => {
+   
+    if ($.fn.dataTable.isDataTable("#productsTable")) {
+      $("#productsTable").DataTable().destroy();
+    }
+    
+    if (products.length > 0) {
+       $("#productsTable").DataTable({
+      language: {
+        lengthMenu: "Mostrar _MENU_ registros por página",
+        zeroRecords: "Nenhum registro encontrado",
+        info: "Mostrando página _PAGE_ de _PAGES_",
+        infoEmpty: "Nenhum registro disponível",
+        infoFiltered: "(filtrado de _MAX_ registros no total)",
+        search: "Buscar:",
+        paginate: {
+          first: "Primeiro",
+          last: "Último",
+          next: "Próximo",
+          previous: "Anterior"
+        }
+      }
+    });
+  }
+}, [products]);
 
   const deleteProduct = async (id) => {
    if (window.confirm("Tem certeza que deseja excluir este produto?")) {
