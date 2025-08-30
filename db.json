@@ -1,13 +1,28 @@
 {
-    "products": [
-        {
-        "id": 1,
-        "nome": "Notebook",
-        "preco": 3500,
-        "ativo": true,
-        "data_criacao": "2025-01-01",
-        "data_atualizacao": "2025-01-10"
-        }
-       
-    ]
+  "products": [
+    {
+      "id": "1",
+      "nome": "Notebook",
+      "preco": 3500,
+      "ativo": true,
+      "data_criacao": "2025-01-01",
+      "data_atualizacao": "2025-01-10"
+    },
+    {
+      "id": "9cd6",
+      "nome": "banana",
+      "preco": 18.99,
+      "ativo": true,
+      "data_criacao": "2025-08-30",
+      "data_atualizacao": "2025-08-30"
+    },
+    {
+      "id": "1fd7",
+      "nome": "suco de maracujá",
+      "preco": 2,
+      "ativo": true,
+      "data_criacao": "2025-08-30",
+      "data_atualizacao": "2025-08-30"
+    }
+  ]
 }

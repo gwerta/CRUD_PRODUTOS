@@ -16,7 +16,7 @@ export default function ProductForm() {
 
     useEffect(() => {
         if (id) {
-            api.get(`/produtos/${id}`).then((response) => {
+            api.get(`/products/${id}`).then((response) => {
                 setProduct(response.data);
             });
         }
@@ -28,18 +28,22 @@ export default function ProductForm() {
     };
 
     const handleSubmit = async (event) => {
-        event.preventDefault();
-        try {
-            if (id) {
-                await api.put(`/produtos/${id}`, product);
-            } else {
-                await api.post('/produtos', product);
-            }
-            navigate('/products');
-        } catch (error) {
-            console.error(error);
+    event.preventDefault();
+    try {
+        const produtoParaSalvar = {
+            ...product,
+            preco: Number(product.preco) // garante que seja número
+        };
+        if (id) {
+            await api.put(`/products/${id}`, produtoParaSalvar);
+        } else {
+            await api.post('/products', produtoParaSalvar);
         }
-    };
+        navigate('/products');
+    } catch (error) {
+        console.error(error);
+    }
+};
     return (
         <div className="container mt-4">
             <h1>{id ? 'Editar Produto' : 'Adicionar Produto'}</h1>
