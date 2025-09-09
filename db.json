@@ -4,17 +4,9 @@
       "id": "1",
       "nome": "Notebook",
       "preco": 3500,
-      "ativo": true,
+      "ativo": false,
       "data_criacao": "2025-01-01",
       "data_atualizacao": "2025-01-10"
-    },
-    {
-      "id": "9cd6",
-      "nome": "banana",
-      "preco": 20,
-      "ativo": true,
-      "data_criacao": "2025-08-30",
-      "data_atualizacao": "2025-08-30"
     },
     {
       "id": "1fd7",
@@ -23,6 +15,14 @@
       "ativo": true,
       "data_criacao": "2025-08-30",
       "data_atualizacao": "2025-08-30"
+    },
+    {
+      "id": "912c",
+      "nome": "Banana",
+      "preco": 3,
+      "ativo": true,
+      "data_criacao": "2025-09-09",
+      "data_atualizacao": "2025-09-09"
     }
   ]
 }

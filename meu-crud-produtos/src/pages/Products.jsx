@@ -76,7 +76,7 @@ export default function Products() {
               <tr key={product.id}>
                 <td>{product.id}</td>
                 <td>{product.nome}</td>
-                <td>{product.preco.toFixed(2)}</td>
+                <td>R$ {product.preco.toFixed(2)}</td>
                 <td>{product.ativo ? "Sim" : "Não"}</td>
                 <td>{product.data_criacao}</td>
                 <td>{product.data_atualizacao}</td>

@@ -32,7 +32,7 @@ export default function ProductForm() {
     try {
         const produtoParaSalvar = {
             ...product,
-            preco: Number(product.preco) // garante que seja número
+            preco: Number(product.preco)
         };
         if (id) {
             await api.put(`/products/${id}`, produtoParaSalvar);
