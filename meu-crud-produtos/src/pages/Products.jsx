@@ -3,7 +3,7 @@ import api from "../services/api";
 import $ from "jquery";
 import "datatables.net";
 import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
 export default function Products() {
@@ -49,6 +49,7 @@ export default function Products() {
    if (window.confirm("Tem certeza que deseja excluir este produto?")) {
       await api.delete(`/products/${id}`);
       loadProducts();
+      window.location.reload();
     }
   };
 

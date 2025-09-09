@@ -11,7 +11,7 @@
     {
       "id": "9cd6",
       "nome": "banana",
-      "preco": 18.99,
+      "preco": 20,
       "ativo": true,
       "data_criacao": "2025-08-30",
       "data_atualizacao": "2025-08-30"
